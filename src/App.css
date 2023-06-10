@@ -205,3 +205,66 @@ a {
     opacity: 1;
   }
 }
+
+
+/* ------------------Coin-Styling------------------ */
+.coin-box {
+  width: 230px;
+  height: 130px;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 20px;
+  border: 1px solid #cacaca;
+}
+
+.coin-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.coin-header img {
+  margin-right: 10px;
+}
+
+.coin-header .coin-name {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.coin-price {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.status-icon-green i {
+  padding: 2px;
+  border-radius: 30%;
+  color: #fff;
+  height: 10px;
+  background: rgb(84, 195, 36);
+  margin-right: 10px;
+}
+
+.status-icon-red i {
+  padding: 2px;
+  border-radius: 30%;
+  color: #fff;
+  height: 10px;
+  background: rgb(210, 77, 77);
+  margin-right: 10px;
+}
+
+.coin-status {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 600px) {
+  .coin-box {
+    width: 170px;
+    padding: 10px 10px;
+  }
+}

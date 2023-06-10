@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import GlobalStats from '../components/GlobalStats';
+import GlobalStats from '../components/HomeComponents/GlobalStats';
 import '../styles/Home.css'
 import '../index.css';
 import axios from 'axios';
 import Loader from '../components/Loader';
+import TopTenCoins from '../components/HomeComponents/TopTenCoins';
 
 
 
@@ -16,7 +17,7 @@ const options = {
     "tiers[0]": "1",
     orderBy: "marketCap",
     orderDirection: "desc",
-    limit: "50",
+    limit: "10",
     offset: "0",
   },
   headers: {
@@ -36,19 +37,23 @@ const Home = () => {
         setLoading(false);
         setcoinsData(response.data.data);
       } catch (error) {
+        setLoading(false);
         console.error(error);
       }
     };
     
     fetchData();
   }, []);
-  console.log(coinsData);
 
   if(loading) return <Loader />;
 
   return (
     <div className="home-wrapper">
-      <GlobalStats data={coinsData} />
+      <h1 style={{textAlign:'center'}}>Home</h1>
+      <div className="section-wrapper">
+        <GlobalStats data={coinsData} />
+        <TopTenCoins coinsData={coinsData} />
+      </div>
     </div>
   );
 }

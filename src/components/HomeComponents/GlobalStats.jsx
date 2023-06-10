@@ -1,7 +1,6 @@
 import React from 'react'
 
 const GlobalStats = (props) => {
-  console.log(props.data);
   return (
     <div className="global-status-container">
       <h2 className="global-title">Global Crypto Stats</h2>
