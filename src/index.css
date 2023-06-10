@@ -11,9 +11,58 @@ body {
 }
 
 .container {
-    width: 100%;
-    max-width: 1920px;
+    width: 96%;
+    max-width: 1270px;
+    margin: 0 auto;
+    overflow: hidden;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------NavBar-Styling------------------ */
+.nav-container {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #cfcbcb;
+}
+.nav-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.logo {
+    width: 35px;
+    height: 35px;
+    background-image: url(./images/cryptoverse.png);
+    background-size: contain;
+    background-position: center;
+}
+.page-name {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+

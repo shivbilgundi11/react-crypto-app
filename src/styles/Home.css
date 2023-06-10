@@ -1,0 +1,44 @@
+.home-wrapper {
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+/* global-status-container Styling */
+.global-status-container {
+    padding: 1rem;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    background-color: #F1F2F5;
+    margin: 0 auto;
+}
+.global-title {text-align: center;}
+
+.stats-container {
+    display: flex;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+
+.stat-item {
+    padding: 1rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.stat-title {
+    color: #171616;
+    font-weight: 500;
+}
+.stat-value {
+    font-weight: 700;
+}

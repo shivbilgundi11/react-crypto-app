@@ -3,13 +3,12 @@ import { NavLink } from 'react-router-dom';
 import '../App.css';
 
 const NavMenu = () => {
-    
   return (
     <div className="navmenu-container">
       <div className="navigation">
         <ul>
-          <li className="list active">
-            <NavLink to={"/"}>
+          <li className="list">
+            <NavLink to={"/"} className="nlink">
               <span className="icon">
                 <i className="ri-home-7-line"></i>
               </span>
@@ -17,7 +16,7 @@ const NavMenu = () => {
             </NavLink>
           </li>
           <li className="list">
-            <NavLink to={"/exchanges"}>
+            <NavLink to={"/exchanges"} className="nlink">
               <span className="icon">
                 <i className="ri-exchange-dollar-line"></i>
               </span>
@@ -25,7 +24,7 @@ const NavMenu = () => {
             </NavLink>
           </li>
           <li className="list">
-            <NavLink to={"/coins"}>
+            <NavLink to={"/coins"} className="nlink">
               <span className="icon">
                 <i className="ri-bit-coin-line"></i>
               </span>
@@ -33,7 +32,7 @@ const NavMenu = () => {
             </NavLink>
           </li>
           <li className="list">
-            <NavLink to={"/news"}>
+            <NavLink to={"/news"} className="nlink">
               <span className="icon">
                 <i className="ri-newspaper-line"></i>
               </span>
