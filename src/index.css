@@ -11,13 +11,19 @@ body {
 }
 
 .container {
-    width: 96%;
+    width: 100%;
     max-width: 1270px;
     margin: 0 auto;
     overflow: hidden;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
 }
 
 

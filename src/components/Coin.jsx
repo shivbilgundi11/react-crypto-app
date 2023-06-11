@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css';
 
 const Coin = ({coin}) => {
-    // console.log(coin);
   return (
     <div className="coin-box">
       <div className="coin-header">
