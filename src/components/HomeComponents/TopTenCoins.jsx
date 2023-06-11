@@ -6,9 +6,9 @@ const TopTenCoins = ({coinsData}) => {
   return (
     <div className="ttc-container">
       <div className="ttc-header">
-        <h2>Top Ten Coins</h2>
+        <h2 className=" title-2">Top Ten Coins</h2>
 
-        <Link to={"/coins"} className='more-btn'>
+        <Link to={"/coins"} className="more-btn">
           More Coin's <i className="ri-arrow-right-s-line"></i>
         </Link>
       </div>

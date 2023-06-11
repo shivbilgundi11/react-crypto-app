@@ -28,7 +28,6 @@ const NewsCard = ({post}) => {
           />
           <h5>{post.provider[0].name}</h5>
         </div>
-      </div>
 
       <div className="post-link-cont">
         <p className="publish-time">
@@ -38,6 +37,7 @@ const NewsCard = ({post}) => {
         <Link to={post.url} target="blank" className="post-link">
           Read Article <i className="ri-external-link-line"></i>
         </Link>
+      </div>
       </div>
     </div>
   );

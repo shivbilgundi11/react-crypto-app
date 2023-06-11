@@ -158,8 +158,8 @@ img {
 
 .news-footer {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
 .publish-time {
@@ -167,9 +167,7 @@ img {
 }
 
 .news-provider {
-    /* max-width: 120px; */
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 

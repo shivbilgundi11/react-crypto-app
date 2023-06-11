@@ -6,6 +6,7 @@ import axios from 'axios';
 import Loader from '../components/Loader';
 import TopTenCoins from '../components/HomeComponents/TopTenCoins';
 import TopTenNews from '../components/HomeComponents/TopTenNews';
+import Footer from '../components/Footer';
 
 
 
@@ -35,7 +36,7 @@ const NewsOptions = {
   params: {
     q: "cryptocurrency",
     count: "10",
-    freshness: "Day",
+    freshness: "day",
     textFormat: "Raw",
     safeSearch: "Off",
   },
@@ -76,11 +77,14 @@ const Home = () => {
 
   return (
     <div className="home-wrapper">
-      <h1 style={{textAlign:'center'}}>Home</h1>
+      <h1 style={{ textAlign: "center" }} className="page-title">
+        Home
+      </h1>
       <div className="section-wrapper">
         <GlobalStats data={coinsData} />
         <TopTenCoins coinsData={coinsData} />
-        <TopTenNews news={newsData.value}/>
+        <TopTenNews news={newsData.value} />
+        <Footer />
       </div>
     </div>
   );
