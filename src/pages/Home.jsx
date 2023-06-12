@@ -47,7 +47,6 @@ const NewsOptions = {
   },
 };
 
-// const axios = require("axios");
 
 const Home = () => {
   const [coinsData, setcoinsData] = useState();
@@ -62,7 +61,7 @@ const Home = () => {
         setLoading(false);
         setcoinsData(response.data.data);
         setNewsData(newsResponse.data);
-        // console.log(newsResponse.data);
+        // console.log(newsResponse.data.data.value[0]);
       } catch (error) {
         setLoading(false);
         console.error(error);

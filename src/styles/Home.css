@@ -187,18 +187,20 @@ img {
 }
 
 .post-link {
-    color: #000;
+    color: blue;
     text-align: end;
     cursor: pointer;
     font-size: 14px;
 }
 .post-link:hover {
-    color: blue;
+    color: #000;
 }
 
 .more-btn {
+  color: blue !important;
   font-size: 29px;
 }
 .more-btn:hover {
+    color: #000 !important;
     text-decoration: underline;
 }
