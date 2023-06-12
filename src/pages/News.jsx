@@ -39,7 +39,6 @@ const News = () => {
         const newsResponse = await axios.request(options);
         setLoading(false);
         setNews(newsResponse.data.value);
-        // console.log(newsResponse.data.value);
       } catch (error) {
         setLoading(false);
         alert(error);
@@ -49,7 +48,6 @@ const News = () => {
     fetchData();
   }, []);
 
-  console.log(news);
 
   if(loading) return <Loader />;
 

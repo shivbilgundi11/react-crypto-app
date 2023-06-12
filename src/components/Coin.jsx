@@ -3,18 +3,21 @@ import '../App.css';
 
 const Coin = ({coin}) => {
   return (
-    <div className="coin-box">
+    <div
+      className="coin-box"
+      onClick={() => window.open(`/coins/${coin.id}`, "_self")}
+    >
       <div className="coin-header">
-        <img src={coin.iconUrl} alt="" width={30} />
+        <img src={coin.image} alt="" width={30} />
         <p className="coin-name">{coin.name}</p>
       </div>
 
       <p className="coin-price">
-        $ {((coin.price * 100) / 100).toFixed(2)} {coin.symbol}
+        ₹ {coin.current_price.toLocaleString("en-IN")} {coin.symbol}
       </p>
 
       <div className="coin-status">
-        {(coin.change > 0) ? (
+        {coin.market_cap_change_percentage_24h > 0 ? (
           <span className="status-icon-green">
             <i className="ri-arrow-right-up-line"></i>
           </span>
@@ -23,7 +26,9 @@ const Coin = ({coin}) => {
             <i className="ri-arrow-right-down-line"></i>
           </span>
         )}
-        <span className="coin-status">{coin.change}%</span>
+        <span className="coin-status">
+          {coin.market_cap_change_percentage_24h}%
+        </span>
       </div>
     </div>
   );

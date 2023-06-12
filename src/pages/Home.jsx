@@ -52,16 +52,21 @@ const Home = () => {
   const [coinsData, setcoinsData] = useState();
   const [newsData, setNewsData] = useState();
   const [loading, setLoading] = useState(true);
+  const [coins, setCoins] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.request(CoinsOptions);
         const newsResponse = await axios.request(NewsOptions);
+        const {data} = await axios.get(
+          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=10&page=1&sparkline=false&locale=en`,
+          "crossDomain: true"
+        );
         setLoading(false);
         setcoinsData(response.data.data);
+        setCoins(data);
         setNewsData(newsResponse.data);
-        // console.log(newsResponse.data.data.value[0]);
       } catch (error) {
         setLoading(false);
         console.error(error);
@@ -81,7 +86,7 @@ const Home = () => {
       </h1>
       <div className="section-wrapper">
         <GlobalStats data={coinsData} />
-        <TopTenCoins coinsData={coinsData} />
+        <TopTenCoins coinsData={coins} />
         <TopTenNews news={newsData.value} />
         <Footer />
       </div>

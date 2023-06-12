@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const demoImage = 'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg';
 
 const NewsCard = ({post}) => {
-  console.log(post);
   return (
     <div className="newsCard-container">
       <div className="news-header">

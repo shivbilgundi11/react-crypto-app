@@ -212,6 +212,7 @@ a {
   border-radius: 20px;
   border: 1px solid #cacaca;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .coin-box:hover {

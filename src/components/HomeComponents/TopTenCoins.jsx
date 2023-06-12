@@ -14,8 +14,8 @@ const TopTenCoins = ({coinsData}) => {
       </div>
 
       <div className="coins-wrapper">
-        {coinsData.coins.map((coin, index) => {
-          return <Coin coin={coin} key={coin.uuid} />;
+        {coinsData.map((coin) => {
+          return <Coin coin={coin} key={coin.id} />;
         })}
       </div>
     </div>
