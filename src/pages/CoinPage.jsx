@@ -153,16 +153,24 @@ const CoinPage = () => {
             <li className="md-item">
               <p className="data-name">Circulating Supply</p>
               <p className="data-value">
-                {coinData.market_data.circulating_supply}
+                {coinData.market_data?.circulating_supply?.toLocaleString(
+                  "en-US"
+                ) || "No Data"}
               </p>
             </li>
             <li className="md-item">
               <p className="data-name">Total Supply</p>
-              <p className="data-value">{coinData.market_data.total_supply}</p>
+              <p className="data-value">
+                {coinData.market_data?.total_supply?.toLocaleString("en-US") ||
+                  "No Data"}
+              </p>
             </li>
             <li className="md-item">
               <p className="data-name">Max Supply</p>
-              <p className="data-value">{coinData.market_data.max_supply}</p>
+              <p className="data-value">
+                {coinData.market_data?.max_supply?.toLocaleString("en-US") ||
+                  "No Data"}
+              </p>
             </li>
           </ul>
         </div>
@@ -179,7 +187,7 @@ const CoinPage = () => {
         <button
           className="btn btn-1"
           onClick={(e) => {
-            setDays("24h")
+            setDays("24h");
           }}
         >
           24h
@@ -187,7 +195,7 @@ const CoinPage = () => {
         <button
           className="btn"
           onClick={(e) => {
-            setDays("7d")
+            setDays("7d");
           }}
         >
           7d
@@ -195,7 +203,7 @@ const CoinPage = () => {
         <button
           className="btn"
           onClick={(e) => {
-            setDays("14d")
+            setDays("14d");
           }}
         >
           14d
@@ -203,7 +211,7 @@ const CoinPage = () => {
         <button
           className="btn"
           onClick={(e) => {
-            setDays("30d")
+            setDays("30d");
           }}
         >
           30d
@@ -211,7 +219,7 @@ const CoinPage = () => {
         <button
           className="btn"
           onClick={(e) => {
-            setDays("90d")
+            setDays("90d");
           }}
         >
           90d
@@ -219,7 +227,7 @@ const CoinPage = () => {
         <button
           className="btn"
           onClick={(e) => {
-            setDays("180d")
+            setDays("180d");
           }}
         >
           180d
@@ -227,7 +235,7 @@ const CoinPage = () => {
         <button
           className="btn"
           onClick={(e) => {
-            setDays("365d")
+            setDays("365d");
           }}
         >
           1y
@@ -235,7 +243,7 @@ const CoinPage = () => {
         <button
           className="btn"
           onClick={(e) => {
-            setDays("max")
+            setDays("max");
           }}
         >
           Max
