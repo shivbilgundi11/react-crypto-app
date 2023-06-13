@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css';
-import Coinranking from '../images/coinranking.png';
+import Coinranking from '../images/coingecko.png';
 
 
 
@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="powered-by-box">
         <p className="powered-by">
           Powered by <img src={Coinranking} alt='coinranking' className="powered-by-img" />
-          <span className="powered-by-text">Coinranking</span>
+          <span className="powered-by-text">CoinGecko</span>
         </p>
       </div>
     </div>
