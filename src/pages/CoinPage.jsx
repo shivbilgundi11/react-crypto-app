@@ -14,7 +14,7 @@ const CoinPage = () => {
   const params = useParams();
   const [coinData, setCoinData] = useState();
   const [loading, setLoading] = useState(true);
-  const [currency, setCurrency] = useState("INR");
+  const [currency, setCurrency] = useState("inr");
   const [coinHistory, setCoinHistory] = useState([]);
   const [days, setDays] = useState("24h");
 
@@ -58,8 +58,8 @@ const CoinPage = () => {
               setCurrency(e.target.value);
             }}
           >
-            <option value="INR">INR</option>
-            <option value="USD">USD</option>
+            <option value="inr">INR</option>
+            <option value="usd">USD</option>
           </select>
         </div>
       </div>
