@@ -172,3 +172,49 @@
 .desc a {
     color: blue;
 }
+
+
+
+
+
+/* -------------------Chart-Styles------------------- */
+.chart-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.last-updated {
+    font-size: 14px;
+    color: #6b6b6b;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.chart-box {
+    width: 100%;
+    margin: 2rem auto 3rem;
+    /* max-width: 900px; */
+}
+
+.btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #e5e7eb;
+}
+
+.btn.Active {
+    background-color: #e5e7eb;
+}
+

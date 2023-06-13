@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom';
-import '../styles/Coinpage.css';
-import axios from 'axios';
-import Loader from '../components/Loader';
-import HTMLReactParser from 'html-react-parser';
-import Footer from '../components/Footer';
-import Chart from '../components/Chart';
+import React, { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import "../styles/Coinpage.css";
+import axios from "axios";
+import Loader from "../components/Loader";
+import HTMLReactParser from "html-react-parser";
+import Footer from "../components/Footer";
+import Chart from "../components/Chart";
 
 const demoImage =
   "http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg";
@@ -14,7 +14,9 @@ const CoinPage = () => {
   const params = useParams();
   const [coinData, setCoinData] = useState();
   const [loading, setLoading] = useState(true);
-  const [currency, setCurrency] = useState("inr");
+  const [currency, setCurrency] = useState("INR");
+  const [coinHistory, setCoinHistory] = useState([]);
+  const [days, setDays] = useState("24h");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,19 +24,23 @@ const CoinPage = () => {
         const response = await axios.get(
           `https://api.coingecko.com/api/v3/coins/${params.id}`
         );
+        const { data } = await axios.get(
+          `https://api.coingecko.com/api/v3/coins/${params.id}/market_chart?vs_currency=${currency}&days=${days}`
+        );
         setCoinData(response.data);
+        setCoinHistory(data.prices);
+        console.log(data.prices);
         setLoading(false);
-        console.log(response.data);
       } catch (error) {
         setLoading(false);
         console.log(error);
       }
     };
     fetchData();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currency]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currency, days]);
 
-  if(loading) return <Loader />;
+  if (loading) return <Loader />;
 
   return (
     <div className="coinpage-container">
@@ -52,8 +58,8 @@ const CoinPage = () => {
               setCurrency(e.target.value);
             }}
           >
-            <option value="inr">INR</option>
-            <option value="usd">USD</option>
+            <option value="INR">INR</option>
+            <option value="USD">USD</option>
           </select>
         </div>
       </div>
@@ -162,18 +168,91 @@ const CoinPage = () => {
         </div>
       </div>
 
-      <Chart currency={currency} />
+      <Chart
+        currency={currency}
+        days={days}
+        time={coinData.last_updated}
+        arr={coinHistory}
+      />
+
+      <div className="btn-container">
+        <button
+          className="btn btn-1"
+          onClick={(e) => {
+            setDays("24h")
+          }}
+        >
+          24h
+        </button>
+        <button
+          className="btn"
+          onClick={(e) => {
+            setDays("7d")
+          }}
+        >
+          7d
+        </button>
+        <button
+          className="btn"
+          onClick={(e) => {
+            setDays("14d")
+          }}
+        >
+          14d
+        </button>
+        <button
+          className="btn"
+          onClick={(e) => {
+            setDays("30d")
+          }}
+        >
+          30d
+        </button>
+        <button
+          className="btn"
+          onClick={(e) => {
+            setDays("90d")
+          }}
+        >
+          90d
+        </button>
+        <button
+          className="btn"
+          onClick={(e) => {
+            setDays("180d")
+          }}
+        >
+          180d
+        </button>
+        <button
+          className="btn"
+          onClick={(e) => {
+            setDays("365d")
+          }}
+        >
+          1y
+        </button>
+        <button
+          className="btn"
+          onClick={(e) => {
+            setDays("max")
+          }}
+        >
+          Max
+        </button>
+      </div>
 
       {/* Coin-Desccription-Content  */}
-      {coinData.description.en ? <div className="desc-container">
-        <h3>What is {coinData.name}</h3>
-        <p className="desc">{HTMLReactParser(coinData.description.en)}</p>
-      </div> : null}
+      {coinData.description.en ? (
+        <div className="desc-container">
+          <h3>What is {coinData.name}</h3>
+          <p className="desc">{HTMLReactParser(coinData.description.en)}</p>
+        </div>
+      ) : null}
 
       <Footer />
-      
     </div>
   );
-}
+};
 
 export default CoinPage;
