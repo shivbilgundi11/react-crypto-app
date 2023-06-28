@@ -34,7 +34,7 @@ Here're some of the project's best features:
 *   Coin page has some basic description of the coin.
 *   This app is completly mobile responsive.
 *   Works seamlessly on any screen size
-
+*   The price can be seen in 2 currencies INR and USD
   
   
 <h2>💻 Built with</h2>
@@ -48,4 +48,4 @@ Technologies and packages used in the project:
 *   Material-Ui Pagination
 *   Chart.js
 *   Other icons and small pakages...
-*   The price can be seen in 2 currencies INR and USD
+
