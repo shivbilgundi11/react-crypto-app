@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+<h1 align="center" id="title">Cryptoverse</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p id="description">Cryptoverse Crypto price tracking application built with react.js, css and other technologies and packages.</p>
 
-In the project directory, you can run:
+<h2>🚀 Demo</h2>
+https://cryptoversebyfrontend-shiv.netlify.app/
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Project Screenshots:</h2>
 
-### `npm test`
+![cryptoversebyfrontend-shiv netlify app_ (1)](https://github.com/shivbilgundi11/react-crypto-app/assets/101513013/37daa304-3695-4bd2-b1b4-66587c011ec7)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![cryptoversebyfrontend-shiv netlify app_ (2)](https://github.com/shivbilgundi11/react-crypto-app/assets/101513013/f5405d23-94f6-466d-af67-712239f9e3da)
 
-### `npm run build`
+![cryptoversebyfrontend-shiv netlify app_ (3)](https://github.com/shivbilgundi11/react-crypto-app/assets/101513013/479f0343-6562-4804-a841-9fce20d02520)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![cryptoversebyfrontend-shiv netlify app_coins_bitcoin](https://github.com/shivbilgundi11/react-crypto-app/assets/101513013/5429b37f-b337-486b-bd86-d92f1f7bde5d)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  
+  
+<h2>🧐 Features</h2>
 
-### `npm run eject`
+Here're some of the project's best features:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*   A 4 pages application.
+*   Home with global crypto stats, top news, top coins.
+*   Exchanges page contains all the crypto exchanges with on click redirects to the official exchange page.
+*   Listing of coins with price and other status.
+*   On click of each coin opens coinpage with in detail info about the respective coin.
+*   Coin page has historic price chart using chart.js.
+*   Coin page has some basic description of the coin.
+*   This app is completly mobile responsive.
+*   Works seamlessly on any screen size
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  
+  
+<h2>💻 Built with</h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Technologies and packages used in the project:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+*   React.js
+*   CSS
+*   Axios
+*   React-Router-Dom
+*   Material-Ui Pagination
+*   Chart.js
+*   Other icons and small pakages...
+*   The price can be seen in 2 currencies INR and USD
