@@ -22,15 +22,15 @@ const News = () => {
         method: "GET",
         url: "https://bing-news-search1.p.rapidapi.com/news/search",
         params: {
-          q: 'cryptocurrency',
+          q: "cryptocurrency",
           textFormat: "Raw",
           safeSearch: "Off",
-          count: "100",
+          count: "10",
         },
         headers: {
           "X-BingApis-SDK": "true",
           "X-RapidAPI-Key":
-            "728cac0fc2msh3fd440b5ac1fa6dp1db2bfjsn23d2877f847d",
+            "72e8caeb38mshaecd713659a1e0bp1663eejsnbcbb38f38eb3",
           "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
         },
       };

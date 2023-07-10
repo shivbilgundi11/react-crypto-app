@@ -42,7 +42,7 @@ const NewsOptions = {
   },
   headers: {
     "X-BingApis-SDK": "true",
-    "X-RapidAPI-Key": "728cac0fc2msh3fd440b5ac1fa6dp1db2bfjsn23d2877f847d",
+    "X-RapidAPI-Key": "72e8caeb38mshaecd713659a1e0bp1663eejsnbcbb38f38eb3",
     "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
   },
 };
@@ -67,6 +67,7 @@ const Home = () => {
         setcoinsData(response.data.data);
         setCoins(data);
         setNewsData(newsResponse.data);
+        console.log(newsResponse.data);
       } catch (error) {
         setLoading(false);
         console.error(error);
